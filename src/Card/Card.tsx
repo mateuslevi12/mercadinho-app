@@ -9,8 +9,8 @@ export function Cards({ nome, preco, adicionar, produto, }: any) {
             <div className={styles.card}>
                 {/* <div>{imagem}</div> */}
                 <div>
-                    <h1>{nome}</h1>
-                    <p>Valor: {preco},00</p>
+                    <p>{nome}</p>
+                    <p>Valor: R${preco},00</p>
 
                 </div>
                 <div className={styles.divAdicionar}>

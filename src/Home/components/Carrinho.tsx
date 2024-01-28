@@ -26,6 +26,10 @@ export function Carrinho({ carrinho, goHome, remover, total, goForm }: any) {
                     <h2>Carrinho</h2>
                 </div>
 
+                    <div className={styles.total}>
+                        {carrinho.length > 0 && <p>Total - R${carrinho.length == 0 ? '00' : total},00</p>}
+
+                    </div>
                 <div className={styles.body}>
                     {carrinho.map((c: Product, index: number) => {
                         return (
@@ -42,10 +46,6 @@ export function Carrinho({ carrinho, goHome, remover, total, goForm }: any) {
                             </>
                         )
                     })}
-                    <div className={styles.total}>
-                        {carrinho.length > 0 && <p>Total - R${carrinho.length == 0 ? '00' : total},00</p>}
-
-                    </div>
                 </div>
                 <button className={styles.proxima} onClick={goForm}><FaArrowRight size={30}/></button>
             </main>

@@ -29,7 +29,7 @@ export function Form({  carrinho, goCard, setRua, setNome, setNumero, setComplem
                         </div>
                         <input placeholder='Complemento' type="text" onChange={(e) => setComplemento(e.target.value)} />
                     </div>
-                    <button onClick={enviarCarrinhoParaWhatsApp} className={styles.enviar}>Enviar Pedido! <FaWhatsapp size={30} color='white' /></button>
+                    <button  onClick={enviarCarrinhoParaWhatsApp} className={styles.enviar}>Enviar Pedido! <FaWhatsapp size={30} color='white' /></button>
                 </div>
             </main>
 
