@@ -2,7 +2,7 @@ import { FaArrowLeft, FaWhatsapp } from 'react-icons/fa6'
 import styles from './Form.module.css'
 import { GiShoppingCart } from 'react-icons/gi'
 
-export function Form({  carrinho, goCard, setRua, setNome, setNumero, setComplemento, enviarCarrinhoParaWhatsApp }) {
+export function Form({  carrinho, goCard, setRua, setNome, setNumero, setComplemento, enviarCarrinhoParaWhatsApp }:any) {
     return (
         <>
             <main>  

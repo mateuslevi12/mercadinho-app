@@ -1,14 +1,13 @@
 
 import { MdAddShoppingCart } from "react-icons/md";
-import { Product } from "../Produtos";
 import styles from './Card.module.css'
 
 
-export function Cards({ nome, preco, descricao, categoria, adicionar, produto, imagem }: any) {
+export function Cards({ nome, preco, adicionar, produto, }: any) {
     return (
         <>
             <div className={styles.card}>
-                <div>{imagem}</div>
+                {/* <div>{imagem}</div> */}
                 <div>
                     <h1>{nome}</h1>
                     <p>Valor: {preco},00</p>

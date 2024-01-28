@@ -1,10 +1,9 @@
 import { RxHamburgerMenu } from "react-icons/rx"
 import { Cards } from "../../Card/Card"
-import { FaRegTrashCan } from "react-icons/fa6"
 import { GiShoppingCart } from "react-icons/gi"
-import { ToastContainer } from "react-toastify"
+import { Product } from "../../Produtos"
 
-export function HomePage({logo, styles,  carrinho, adicionar,remover, produtos, enviarCarrinhoParaWhatsApp, total, goCard}) {
+export function HomePage({logo, styles,  carrinho, adicionar, produtos, goCard}:any) {
     return (
         <main className={styles.main}>
             
@@ -19,11 +18,11 @@ export function HomePage({logo, styles,  carrinho, adicionar,remover, produtos, 
         <div className={styles.body}>
 
             {
-                produtos.map((p) => {
+                produtos.map((p:Product) => {
                     return (
                         <>
 
-                            <Cards imagem={p.imagem} produto={p} nome={p.nome} preco={p.preco} descricao={p.descricao} categoria={p.categoria} adicionar={adicionar} />
+                            <Cards  produto={p} nome={p.nome} preco={p.preco} descricao={p.descricao} categoria={p.categoria} adicionar={adicionar} />
 
                         </>
                     )

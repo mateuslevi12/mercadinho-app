@@ -5,7 +5,6 @@ import { useEffect, useState } from 'react';
 import { HomePage } from './components/HomePage';
 import { Carrinho } from './components/Carrinho';
 import { Form } from './components/Form';
-import { ToastContainer, toast } from 'react-toastify';
 
 export function Home() {
     const [carrinho, setCarrinho] = useState<Product[]>([])
@@ -75,6 +74,7 @@ export function Home() {
         setHome(false);
         setForm(true)
         setCarrinhoOpen(false)
+        console.log(form)
     }
 
 

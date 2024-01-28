@@ -1,7 +1,7 @@
 export interface Product {
     id?: number;
     nome?: string;
-    preco?: number;
+    preco: number;
     descricao?: string;
     categoria?: string;
   }

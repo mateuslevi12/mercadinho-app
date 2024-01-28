@@ -1,8 +1,9 @@
 import { GiShoppingCart } from "react-icons/gi";
 import styles from './Carrinho.module.css'
 import { FaArrowLeft, FaArrowRight, FaRegTrashCan } from "react-icons/fa6";
+import { Product } from "../../Produtos";
 
-export function Carrinho({ carrinho, goHome, remover, total, goForm }) {
+export function Carrinho({ carrinho, goHome, remover, total, goForm }: any) {
     return (
         <>
             <main className={styles.main}>
@@ -26,7 +27,7 @@ export function Carrinho({ carrinho, goHome, remover, total, goForm }) {
                 </div>
 
                 <div className={styles.body}>
-                    {carrinho.map((c, index) => {
+                    {carrinho.map((c: Product, index: number) => {
                         return (
                             <>
                                 <div className={styles.removido}>
