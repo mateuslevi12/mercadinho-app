@@ -1,0 +1,27 @@
+.card {
+    background: white;
+    border-radius: .3rem;
+    border: 1px solid gray;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* width: 50%; */
+    width: 10rem;
+    height: 10rem;
+}
+
+.adicionar {
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.divAdicionar {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    width: 100%;
+    padding-right: 1rem;
+}

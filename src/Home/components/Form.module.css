@@ -1,0 +1,103 @@
+@media(max-width: 500px) {
+    .inputs {
+        /* display: flex; */
+        flex-direction: column;
+    }
+}
+
+@media(min-width: 501px) {
+    .inputs {
+        /* display: flex; */
+        flex-direction: row;
+    }
+}
+
+
+
+.footer {
+    background: #000AFF;
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    /* padding: 0 1rem; */
+   padding: 0 1rem;
+   border-bottom-left-radius: 1rem;
+   border-bottom-right-radius: 1rem;
+   height: 4rem;
+}
+
+.itens {
+    background: white;
+    cursor: pointer;
+    padding: .5rem 1rem;
+    border: none;
+    border-radius: .3rem;
+    color: black;
+    outline: none;
+}
+
+.button {
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.carrinho {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    color: white ;
+    
+}
+
+.form {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    background: white;
+    border: 1px solid;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    border-radius: .5rem;
+    width: 80%;
+}
+
+.bodyForm {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.bodyForm input {
+    padding: .5rem;
+    border: 1px solid;
+    border-radius: .3rem;
+    outline: none;
+}
+
+.enviar {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+    background: #05FF00;
+    border-radius: .3rem;
+    padding: .5rem 0;
+    cursor: pointer;
+    border: none;
+    color: white;
+    outline: none;
+}
+
+.inputs {
+    display: flex;
+    gap: 1rem;
+}
