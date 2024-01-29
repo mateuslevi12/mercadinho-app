@@ -7,7 +7,6 @@ export function Cards({ nome, preco, adicionar, produto, }: any) {
     return (
         <>
             <div className={styles.card}>
-                {/* <div>{imagem}</div> */}
                 <div>
                     <p>{nome}</p>
                     <p>Valor: R${preco},00</p>
@@ -22,4 +21,4 @@ export function Cards({ nome, preco, adicionar, produto, }: any) {
             </div>
         </>
     )
-}
+}   
