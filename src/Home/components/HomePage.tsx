@@ -15,6 +15,15 @@ export function HomePage({logo, styles,  carrinho, adicionar, produtos, goCard}:
         <div className={styles.tittle}>
             <h2>Mercadinho Del Sol</h2>
         </div>
+        <div className={styles.buttons}>
+            <button>bebidas</button>
+            <button>comida</button>
+            <button>limpeza</button>
+            <button>carne</button>
+            <button>carne</button>
+            <button>carne</button>
+            <button>agua</button>
+        </div>
         <div className={styles.body}>
 
             {
