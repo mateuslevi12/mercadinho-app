@@ -112,7 +112,9 @@ header {
     max-width: 100%;
     overflow: auto;
     background: rgb(237, 237, 237);
-    padding: .5rem;
+    padding: .5rem 1rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
 }
 
 .buttons button {
