@@ -13,7 +13,7 @@
 
 @media (min-width: 501px) {
     .body {
-        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr ;
     }
 }
 .main {
@@ -113,8 +113,8 @@ header {
     overflow: auto;
     background: rgb(237, 237, 237);
     padding: .5rem 1rem;
-    margin-left: 1rem;
-    margin-right: 1rem;
+    /* margin-left: 1rem;
+    margin-right: 1rem; */
 }
 
 .buttons button {
