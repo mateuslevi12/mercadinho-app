@@ -10,6 +10,7 @@ export const getProdutos = (_, res) => {
     })
 }
 
+
 export const addProduto = (req, res) => {
     const q = "INSERT INTO produtos(`nome`,`preco`,`categoria`,`url`) VALUES(?)";
 

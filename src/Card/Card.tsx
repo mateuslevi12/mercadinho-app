@@ -3,7 +3,10 @@ import { MdAddShoppingCart } from "react-icons/md";
 import styles from './Card.module.css'
 
 
-export function Cards({ url, nome, preco, adicionar, produto, }: any) {
+
+
+export function Cards({ url, nome, preco, adicionar, produto,removerProduto }: any) {
+    
     return (
         <>
             <div className={styles.card}>
@@ -24,6 +27,9 @@ export function Cards({ url, nome, preco, adicionar, produto, }: any) {
                     {/* <img src={url} alt="" /> */}
                 </div>
                 <div className={styles.divAdicionar}>
+                    <button className={styles.adicionar} onClick={() => removerProduto(produto.id)}>
+                        <MdAddShoppingCart size={25} />
+                    </button>
                     <div style={{
                         display: 'flex',
                         alignItems: 'start',

@@ -4,7 +4,7 @@ import { GiShoppingCart } from "react-icons/gi"
 import { Product } from "../../Produtos"
 import { useEffect, useState } from "react"
 
-export function HomePage({ logo, styles, carrinho, adicionar, produtos, goCard }: any) {
+export function HomePage({ logo, styles, carrinho, adicionar, produtos, goCard, removerProduto }: any) {
 
     const [categoria, setCategoria] = useState<string>('')
 
@@ -35,11 +35,11 @@ export function HomePage({ logo, styles, carrinho, adicionar, produtos, goCard }
             <div className={styles.body}>
 
                 {
-                    produtos.filter(p => p.categoria.includes(categoria)).map((p: Product) => {
+                    produtos.filter((p:any) => p?.categoria.includes(categoria)).map((p: Product) => {
                         return (
                             <>
 
-                                <Cards url={p.url} produto={p} nome={p.nome} preco={p.preco} descricao={p.descricao} categoria={p.categoria} adicionar={adicionar} />
+                                <Cards produto={p} url={p.url} removerProduto={removerProduto} nome={p.nome} preco={p.preco} descricao={p.descricao} categoria={p.categoria} adicionar={adicionar} />
 
                             </>
                         )

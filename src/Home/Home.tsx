@@ -7,6 +7,13 @@ import { Carrinho } from './components/Carrinho';
 import { Form } from './components/Form';
 import axios from 'axios';
 
+interface ProdutoProps {
+    nome: string,
+    preco: string,
+    id: number,
+    categoria: string,
+    url: string,
+}
 export function Home() {
     const [carrinho, setCarrinho] = useState<Product[]>([])
     const [total, setTotal] = useState<number | undefined>(0)
@@ -51,6 +58,8 @@ export function Home() {
 
     }
 
+
+
     function totalPreco() {
         let final = 0
         carrinho.forEach(item => {
@@ -86,7 +95,7 @@ export function Home() {
 
     const [produtos, setProdutos] = useState([])
 
-   
+
 
     async function getProdutos() {
         try {
@@ -97,7 +106,7 @@ export function Home() {
         }
     }
 
-    async function addProdutos({nome, preco, categoria}:any) {
+    async function addProdutos({ nome, preco, categoria }: any) {
         try {
             const response = await axios.post("http://localhost:8800/produtos/add", {
                 nome: nome,
@@ -107,6 +116,18 @@ export function Home() {
             console.log("Produto adicionado:", response.data); // I
             getProdutos()
             goHome()
+        } catch (error) {
+            console.log(error)
+        }
+    }
+
+    async function removerProduto(id: number) {
+        try {
+           await axios.delete(`http://localhost:8800/${id}`)
+                .then(() => {
+                    const newArray = produtos.filter((produto:ProdutoProps) => produto.id !== id);
+                    setProdutos(newArray)
+                })
         } catch (error) {
             console.log(error)
         }
@@ -123,6 +144,7 @@ export function Home() {
             <>
 
                 {home ? <HomePage
+                removerProduto={removerProduto}
                     logo={logo}
                     styles={styles}
                     carrinho={carrinho}
@@ -133,7 +155,7 @@ export function Home() {
                     total={total} goCard={goCard} /> : carrinhoOpen ?
                     <Carrinho carrinho={carrinho} goHome={goHome} total={total} goForm={goForm} remover={remover} />
                     : <Form setPreco={setPreco} getProdutos={getProdutos} goHome={goHome}
-                    setCategoria={setCategoria} adicionar={addProdutos} goCard={goCard} carrinho={carrinho} setRua={setRua} setNome={setNome} setNumero={setNumero} setComplemento={setComplemento} enviarCarrinhoParaWhatsApp={enviarCarrinhoParaWhatsApp} />}
+                        setCategoria={setCategoria} adicionar={addProdutos} goCard={goCard} carrinho={carrinho} setRua={setRua} setNome={setNome} setNumero={setNumero} setComplemento={setComplemento} enviarCarrinhoParaWhatsApp={enviarCarrinhoParaWhatsApp} />}
 
             </>
         </>
